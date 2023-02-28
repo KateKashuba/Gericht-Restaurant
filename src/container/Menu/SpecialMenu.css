@@ -1,5 +1,5 @@
 .app__specialMenu {
-  background-color: var(--color-black);
+  background-color: #0C0C0C;
 }
 .app__specialMenu-content .custom__button {
   display: flex;
@@ -17,33 +17,6 @@
   align-items: flex-start;
   width: 100%;
 }
-.app__specialMenu-menu-items {
-  color: var(--color-golden);
-  width: 100%;
-}
-.app__specialMenu-menu_wine, .app__specialMenu-menu_coctails {
-  flex: 1;
-  flex-direction: column;
-  width: 100%;
-}
-.app__specialMenu-menu-header {
-  color: var(--color-white);
-  font-family: var(--font-base);
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 58.5px;
-  letter-spacing: 0.04em;
-}
-.app__specialMenu-menu_img {
-  flex: 1;
-  margin: 0 2rem;
-  width: 440px;
-}
-.app__specialMenu-menu_img img {
-  width: 100%;
-  height: auto;
-}
-
 @media screen and (max-width: 2000px) {
   .app__specialMenu-menu {
     margin: 4rem 0;
@@ -54,6 +27,36 @@
     flex-direction: column;
     align-items: center;
   }
+}
+.app__specialMenu-menu-items {
+  color: #DCCA87;
+  width: 100%;
+}
+.app__specialMenu-menu_wine, .app__specialMenu-menu_coctails {
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}
+.app__specialMenu-menu-header {
+  color: #FFFFFF;
+  font-family: "Cormorant Upright", serif;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 58.5px;
+  letter-spacing: 0.04em;
+}
+@media screen and (max-width: 650px) {
+  .app__specialMenu-menu-header {
+    font-size: 35px;
+    line-height: 48px;
+  }
+}
+.app__specialMenu-menu_img {
+  flex: 1;
+  margin: 0 2rem;
+  width: 440px;
+}
+@media screen and (max-width: 1150px) {
   .app__specialMenu-menu_img {
     margin: 3rem 2rem;
   }
@@ -62,10 +65,10 @@
   .app__specialMenu-menu_img {
     width: 100%;
   }
-  .app__specialMenu-menu-header {
-    font-size: 35px;
-    line-height: 48px;
-  }
+}
+.app__specialMenu-menu_img img {
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=SpecialMenu.css.map */

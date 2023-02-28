@@ -1,5 +1,11 @@
+$color-black: #0C0C0C;
+$color-golden: #DCCA87;
+$color-white: #FFFFFF;
+
+$font-base: 'Cormorant Upright', serif;
+
 .app__specialMenu {
-    background-color: var(--color-black);
+    background-color: $color-black;
 
     &-content .custom__button {
         display: flex;
@@ -19,8 +25,17 @@
         align-items: flex-start;
         width: 100%;
 
+        @media screen and (max-width: 2000px){
+            margin: 4rem 0;
+        }
+
+        @media screen and (max-width: 1150px){
+            flex-direction: column;
+            align-items: center;
+        }
+
         &-items {
-            color: var(--color-golden);
+            color: $color-golden;
             width: 100%;
         }
 
@@ -32,12 +47,17 @@
         }
 
         &-header{
-            color: var(--color-white);
-            font-family: var(--font-base);
+            color: $color-white;
+            font-family: $font-base;
             font-weight: 600;
             font-size: 45px;
             line-height: 58.5px;
             letter-spacing: 0.04em;
+
+            @media screen and (max-width: 650px){
+                font-size: 35px;
+                line-height: 48px;
+            }
         }
 
         &_img {
@@ -45,38 +65,18 @@
             margin: 0 2rem;
             width: 440px;
 
+            @media screen and (max-width: 1150px){
+                margin: 3rem 2rem;
+            }
+
+            @media screen and (max-width: 650px){
+                width: 100%;
+            }
+
             img {
                 width: 100%;
                 height: auto;
             }
         }
-    }
-}
-
-@media screen and (max-width: 2000px){
-    .app__specialMenu-menu {
-        margin: 4rem 0;
-    }
-}
-
-@media screen and (max-width: 1150px){
-    .app__specialMenu-menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .app__specialMenu-menu_img {
-        margin: 3rem 2rem;
-    }
-}
-
-@media screen and (max-width: 650px){
-    .app__specialMenu-menu_img {
-        width: 100%;
-    }
-
-    .app__specialMenu-menu-header{
-        font-size: 35px;
-        line-height: 48px;
     }
 }
