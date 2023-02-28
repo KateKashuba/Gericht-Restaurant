@@ -64,6 +64,7 @@
     display: none;
     justify-content: flex-end;
     cursor: pointer;
+    background-color: var(--color-black);
 }
 
 .app__navbar-smallscreen_overlay {
@@ -77,6 +78,10 @@
     transition: 0.5s ease;
 
     z-index: 5;
+}
+
+.app__navbar-smallscreen_overlay:target {
+    transform: translateY(0);
 }
 
 .app__navbar-smallscreen_overlay .overlay__close {

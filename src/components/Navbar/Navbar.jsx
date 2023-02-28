@@ -6,8 +6,6 @@ import images from '../../constants/images';
 import './Navbar.css';
 
 const Navbar = () => {
-  // const overlay = document.querySelector('.app__navbar-smallscreen_overlay');
-
   return (
     <>
     <nav className='app__navbar'>
@@ -27,13 +25,17 @@ const Navbar = () => {
         <a href="/" className='p__opensans'>Book Table</a>
       </div>
 
-      <GiHamburgerMenu className='app__navbar-menu' color='#fff' fontSize={27} onClick={() => {document.querySelector('.app__navbar-smallscreen_overlay').style.transform = 'translateY(0)';}} />
+      <a href="#smallmenu" className='app__navbar-menu'>
+        <GiHamburgerMenu color='#fff' fontSize={27}/>
+      </a>
     </nav>
 
     <div className='app__navbar-smallscreen'>
-      <div className='app__navbar-smallscreen_overlay flex__center'>
+      <div className='app__navbar-smallscreen_overlay flex__center' id='smallmenu'>
 
-        <MdOutlineRestaurant fontSize={27} className='overlay__close' onClick={() => {document.querySelector('.app__navbar-smallscreen_overlay').style.transform = 'translateY(-100%)';}} />
+        <a href="#" className='overlay__close'>
+          <MdOutlineRestaurant fontSize={27}/>
+        </a>
 
         <ul className='app__navbar-smallscreen_links'>
           <li className='p__opensans'><a href="#home">Home</a></li>

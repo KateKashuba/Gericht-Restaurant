@@ -1,8 +1,10 @@
 import React from 'react';
 import { SubHeading } from '../../components';
-
+import { Carousel } from '../../components';
 import { images } from '../../constants';
 import './Header.css';
+
+const slides = [images.slide1, images.slide1, images.slide1];
 
 const Header = () => (
   <div className='app__header' id='home'>
@@ -14,7 +16,10 @@ const Header = () => (
         <button type='button' className='custom__button'>Explore Menu</button>
       </div>
       <div className='app__wrapper_img'>
-        <img src={images.welcome} alt="header img" />
+        <Carousel {...slides.map((s) => (
+          <img src={images.s} alt="header img" />
+        ))}/>
+        {/* <img src={images.welcome} alt="header img" /> */}
       </div>
     </div>
   </div>
