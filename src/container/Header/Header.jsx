@@ -4,7 +4,12 @@ import { Carousel } from '../../components';
 import { images } from '../../constants';
 import './Header.css';
 
-const slides = [images.slide1, images.slide1, images.slide1];
+const slides = [
+  { id: 1, name: images.slide1},
+  { id: 2, name: images.slide2},
+  { id: 3, name: images.slide3},
+  { id: 4, name: images.gallery02},
+];
 
 const Header = () => (
   <div className='app__header' id='home'>
@@ -16,10 +21,10 @@ const Header = () => (
         <button type='button' className='custom__button'>Explore Menu</button>
       </div>
       <div className='app__wrapper_img'>
-        <Carousel {...slides.map((s) => (
-          <img src={images.s} alt="header img" />
-        ))}/>
-        {/* <img src={images.welcome} alt="header img" /> */}
+        <Carousel autoSlide={true}>{slides.map((slide) => (
+          <img key={slide.id} src={slide.name} alt="header img" />
+        ))}
+        </Carousel>
       </div>
     </div>
   </div>

@@ -24,9 +24,10 @@
 
 .app__wrapper {
   display: flex;
+  justify-content: space-between;
+  position: relative;
 
   min-height: 100vh;
-  column-gap: 20%;
 }
 
 .app__wrapper_info {
@@ -46,6 +47,7 @@
   align-items: center;
 
   margin-left: 2rem;
+  max-width: 500px;
 }
 
 .app__wrapper_img-reverse {
@@ -94,6 +96,7 @@
   letter-spacing: 0.04em;
   line-height: 28px;
   font-size: 16px;
+  color: var(--color-white);
 }
 
 .headtext__cormorant {
@@ -134,10 +137,15 @@
 @media screen and (max-width: 1150px) {
   .app__wrapper {
     flex-direction: column;
+    align-items: center;
   }
 
   .app__wrapper_img {
-    margin: 5rem 0 0 0;
+    margin: 7rem 0;
+  }
+
+  .slide-content {
+    max-height: 500px;
   }
 
   .app__wrapper_img-reverse {
@@ -158,6 +166,11 @@
 @media screen and (max-width: 650px) {
   .section__padding {
     padding: 4rem 2rem;
+  }
+
+  .slide-content::after,
+  .slide-content::before {
+    content: none;
   }
   
   .p__cormorant {
@@ -181,5 +194,9 @@
   .headtext__cormorant {
     font-size: 45px;
     line-height: 70px;
+  }
+
+  .slide-content {
+    max-height: 400px;
   }
 }

@@ -2,6 +2,16 @@
     background-color: var(--color-black);
 }
 
+.app__header .app__wrapper_info {
+    max-width: 455px;
+}
+
+@media screen and (max-width: 1150px) {
+    .app__header .app__wrapper_info {
+      max-width: 100%;
+    }
+}
+
 .app__header-h1 {
     font-family: var(--font-base);
     color: var(--color-golden);
